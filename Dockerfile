@@ -11,4 +11,7 @@ RUN apk add --no-cache --virtual .run-deps \
     && easy_install-2.7 pip \
     && pip install ansible \
     && apk --purge del .build-deps \
-    && rm -rf /var/cache/apk /root/.cache
+    && rm -rf /var/cache/apk /root/.cache \
+    && adduser -D packer
+
+USER packer
