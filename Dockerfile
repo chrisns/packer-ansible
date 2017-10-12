@@ -16,4 +16,5 @@ RUN apk add --no-cache --virtual .run-deps \
 
 USER packer
 ENV USER=packer
+ENV HOME=/home/packer
 WORKDIR /home/packer
