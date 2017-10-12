@@ -1,3 +1,3 @@
 # Packer + Ansible
 
-Simply adds ansible via apk to latest packer:light image
+Simply adds ansible to latest packer:light image
