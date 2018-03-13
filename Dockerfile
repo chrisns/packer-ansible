@@ -10,7 +10,7 @@ RUN apk add --no-cache --virtual .run-deps \
         python2-dev \
         openssl-dev \
     && easy_install-2.7 pip \
-    && pip install ansible \
+    && pip install ansible passlib \
     && apk --purge del .build-deps \
     && rm -rf /var/cache/apk /root/.cache \
     && adduser -D packer
@@ -19,3 +19,4 @@ USER packer
 ENV USER=packer
 ENV HOME=/home/packer
 WORKDIR /home/packer
+RUN mkdir -p /home/packer/.ssh
